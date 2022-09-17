@@ -1,15 +1,34 @@
 .container {
   position: relative;
+  /* min-width: 700px; */
 }
 
-.navbar.navbar-inverse {
+.navbar {
   position: sticky;
+  display: flex;
   top: 0;
   background-color: rgb(49, 50, 51);
   border: 0;
   margin-bottom: 0;
   border-radius: 10px 10px 0 0;
   z-index: 999;
+}
+
+.nav1 {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.nav1 a {
+  color: #ccc;
+  padding: 0 10px;
+  text-decoration-line: none;
+}
+
+.nav1 a:hover {
+  color: white;
+  background-color: none;
 }
 
 .navbar-header .navbar-brand {
@@ -35,16 +54,16 @@
 
 .xx {
   position: absolute;
-  padding: 20px 50px;
+  padding: 20px 30px;
   background-color: rgba(0, 0, 0, 0.39);
   top: 10%;
   left: 50%;
-  transform: translateX(-50%) ;
+  transform: translateX(-50%);
   width: 50%;
 
 }
 
-.xx .avatar{
+.xx .avatar {
   margin: 0 auto;
   width: 150px;
   height: 150px;
@@ -52,13 +71,40 @@
   overflow: hidden;
 }
 
-.xx .avatar img{
+.xx .avatar img {
   width: 100%;
   height: 150px;
 }
 
-.xx .Information{
+.xx .Information {
   display: flex;
   justify-content: space-between;
   color: white;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+  .xx {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    top: 0;
+    padding: 20px 10px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .xx .Information {
+    justify-content: space-between;
+
+  }
+
+  .xx .Information div {
+    margin-left: 10px;
+
+  }
+
 }
